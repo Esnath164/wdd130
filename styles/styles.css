@@ -1,12 +1,10 @@
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-
-
-:root{
+:root{  
   --height: auto;
   --text-align: center;
   --width: 110px;
@@ -21,8 +19,9 @@ nav a {
     display: block;
     padding: 20px;
 }
+
 h1{
-    color: darkblue;
+    color: blue;
 }
 img {
     width: var(--width);
@@ -76,3 +75,4 @@ aside h2 {
   top: 50px;
   right: 80px;
 }
+
