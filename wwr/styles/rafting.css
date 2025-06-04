@@ -118,16 +118,16 @@ article {
 }
 
 .history-grid {
-   
-    align-items: center; 
+    display: grid;
+   align-items: center; 
     gap: 20px; 
 }
 
 .history-image {
     display: grid;
     place-items: center; 
-    justify-content: center;
-    position:relative;
+    justify-self: center;
+   
 }
 
 
@@ -138,8 +138,9 @@ article {
 }
 
 .history-text {
-    text-align: left;
-    position: absolute; 
+   
+    text-align:center;
+    
 }
 
 .history-text p {
