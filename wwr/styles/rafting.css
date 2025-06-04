@@ -1,10 +1,10 @@
 :root {
-  --primary-color:  #00343D;
-  --secondary-color:#364B29;
-  --accent1-color:  #B4654A;
-  --accent2-color:  antiquewhite;
+  --primary-color: #00343D;
+  --secondary-color: #364B29;
+  --accent1-color: #B4654A;
+  --accent2-color: antiquewhite;
   --heading-font: "Roboto", sans-serif;
-  --body-font: "Montserrat ", sans-serif;
+  --body-font: "Montserrat", sans-serif;
 }
 
 * {
@@ -14,21 +14,19 @@
 }
 
 header {
-    background-color: var(--primary-color);
-    color: var(--accent1-color);
-  }
+  background-color: var(--primary-color);
+  color: var(--accent1-color);
+}
 
-
- body{
+body {
   font-family: var(--body-font);
-  color: var(  --secondary-colo);
+  color: var(--secondary-color);
 }
 
 header, main, footer {
   width: 740px;
   margin: 0 auto;
 }
-
 
 h1, h2 {
   font-family: var(--heading-font);
@@ -41,20 +39,19 @@ nav, p, section, article {
 }
 
 .socialmedia a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .hero {
   position: relative;
 }
 
-
 .hero img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
- 
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 h1 {
   position: absolute;
   top: 20px;
@@ -67,16 +64,143 @@ h1 {
 }
 
 article {
-  position:absolute; 
+  position: absolute; 
   top: 50%;
-  background-color:var(--accent2-color);
+  right: 30px;
+  left: 30px;
+  background-color: var(--accent2-color);
   padding: 10px;
-  margin: 1px;
-  border-radius:1px;
-  
+  margin: 1px; /* Consider adjusting or removing */
+  border-radius: 5px;
 }
 
 .hero article img {
   float: right;
   width: 200px;
+}
+
+.site-header {
+  display: grid;
+  grid-template-columns: auto 3fr;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: var(--primary-color);
+  border: 1px solid var(--accent2-color);
+  margin-bottom: 30px;
+}
+
+.logo img {
+  max-height: 110px;
+  margin-left: 50px;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main-nav a {
+  padding: 8px 16px;
+  border: 1px solid var(--accent2-color);
+  text-decoration: none;
+  background-color: transparent;
+  color: var(--accent2-color);
+  display: inline-block;
+
+}
+
+.history-section {
+    padding: 20px; 
+    text-align: center;
+    background-color: var(--accent2-color);
+    border-radius: 2px; 
+
+}
+
+.history-grid {
+   
+    align-items: center; 
+    gap: 20px; 
+}
+
+.history-image {
+    display: grid;
+    place-items: center; 
+    justify-content: center;
+    position:relative;
+}
+
+
+   .history-image img {
+    width: auto; 
+    height: auto; 
+    max-width: 150px; 
+}
+
+.history-text {
+    text-align: left;
+    position: absolute; 
+}
+
+.history-text p {
+    margin: 0;
+    font-family: var(--body-font); 
+    color: var(--secondary-color); 
+}
+
+.adventure-section {
+    padding: 20px;
+    text-align: center; 
+    background-color: var(--accent1-color); 
+    
+}
+
+.adventure-grid {
+    display: flex; 
+    justify-content: space-between; 
+    flex-wrap: nowrap; 
+    overflow-x: auto; 
+}
+
+figure {
+    margin: 10px; 
+    width: 150px; 
+}
+
+figure img {
+    width: 100%; 
+    height: auto;
+}
+
+figcaption {
+    font-family: var(--body-font); 
+    color: var(--secondary-color); 
+    padding: 10px; 
+    text-align: center; 
+}
+
+footer {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+
+    background-color: var(--accent2-color); 
+}
+
+footer p {
+    margin: 0; 
+    font-family: var(--body-font); 
+    margin-left: 150px;
+    
+}
+
+.socialmedia {
+    display: flex; 
+    gap: 10px; 
+    margin-right: 2px
+}
+
+.socialmedia img {
+    width: 30px;
+    height: auto; 
 }
