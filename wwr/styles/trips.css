@@ -1,0 +1,400 @@
+:root {
+  --primary-color: #00343D;
+  --secondary-color: #364B29;
+  --accent1-color: #B4654A;
+  --accent2-color: antiquewhite;
+  --heading-font: "Roboto", sans-serif;
+  --body-font: "Montserrat", sans-serif;
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header, main, footer {
+  width: 740px;
+  margin: 0 auto;
+}
+
+
+body {
+  font-family: var(--body-font);
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+/* Header Styles */
+.site-header {
+  background-color: var(--primary-color);
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+}
+
+h1 {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  padding: 7px;
+  text-align: center;
+  opacity: 0.7;
+  background-color: var(--accent1-color);
+  color: #fff;
+}
+
+.logo img {
+  height: 90px;
+  width: auto;
+}
+
+
+
+.main-nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main-nav a {
+  padding: 8px 16px;
+  border: 1px solid var(--accent2-color);
+  text-decoration: none;
+  background-color: transparent;
+  color: var(--accent2-color);
+  display: inline-block;
+
+}
+
+.main-nav a:hover {
+  color: #fff;
+}
+
+.main-nav a:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: var(--accent1-color);
+  transition: width 0.3s;
+}
+
+.main-nav a:hover:after {
+  width: 100%;
+}
+
+.main-nav a[href="trips.html"] {
+  color: var(--accent1-color);
+  font-weight: 700;
+}
+
+/* Trips Hero Section */
+.trips-hero {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  margin: 8px;
+  
+}
+
+.trips-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+.trips-hero h1 {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:var(--accent2-color);
+  font-family: var(--heading-font);
+  font-size: 3.5rem;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.trips-hero p {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 100%;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* Trips Overview Section */
+.trips-overview {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.trips-overview h2 {
+  color: var(--primary-color);
+  font-family: var(--heading-font);
+  margin-bottom: 1rem;
+}
+
+.trips-overview p {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.cta-container {
+  margin: 2rem 0;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--accent1-color);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #9c523a;
+}
+
+/* Trip Packages Section */
+.trip-packages {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+
+.trip-packages h2 {
+  color: var(--primary-color);
+  font-family: var(--heading-font);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.trip-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.trip-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.trip-card:hover {
+  transform: translateY(-10px);
+}
+
+.trip-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.trip-card h3 {
+  color: var(--primary-color);
+  font-family: var(--heading-font);
+  padding: 1rem 1.5rem 0;
+  margin-bottom: 0.5rem;
+}
+
+.trip-details {
+  padding: 0 1.5rem 1.5rem;
+}
+
+.trip-details p {
+  margin-bottom: 0.5rem;
+}
+
+.trip-details ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.trip-details li {
+  margin-bottom: 0.5rem;
+}
+
+.book-button {
+  display: block;
+  background-color: var(--secondary-color);
+  color: white;
+  text-align: center;
+  padding: 0.8rem;
+  margin: 0 1.5rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.book-button:hover {
+  background-color: #2a3a1f;
+}
+
+/* Equipment Section */
+.equipment-section {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+
+.equipment-section h2 {
+  color: var(--primary-color);
+  font-family: var(--heading-font);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.equipment-section p {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
+}
+
+.equipment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.equipment-item {
+  text-align: center;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.equipment-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.equipment-item h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+
+.trip-comparison {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+
+.trip-comparison h2 {
+  color: var(--primary-color);
+  font-family: var(--heading-font);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+
+th, td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 500;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #e6e6e6;
+}
+
+
+.final-cta {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 8px;
+}
+
+.final-cta h2 {
+  font-family: var(--heading-font);
+  margin-bottom: 1rem;
+}
+
+.final-cta p {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+
+
+footer {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: var(--primary-color); 
+    margin-top: 5px;
+    margin-bottom:10px;
+     color: var(--accent2-color);
+     text-align: center;
+    
+
+}
+
+footer p {
+    margin: 0; 
+    font-family: var(--body-font); 
+    margin-left: 150px;
+    
+}
+
+.socialmedia {
+    display: flex; 
+    gap: 10px; 
+    margin-right: 2px
+}
+
+.socialmedia img {
+    width: 30px;
+    height: auto; 
+}
